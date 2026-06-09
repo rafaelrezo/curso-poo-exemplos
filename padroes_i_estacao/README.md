@@ -8,6 +8,11 @@ O objetivo não é criar uma arquitetura grande. O objetivo é mostrar que separ
 
 ```text
 padroes_i_estacao/
+  sem_padroes/
+    dispositivo_cpp/
+      main.cpp
+    supervisor_python/
+      app_sem_repository.py
   dispositivo_cpp/
     include/
       bomba.hpp
@@ -25,6 +30,18 @@ padroes_i_estacao/
 
 ## Como executar o C++
 
+### Contraexemplo sem padrões
+
+```bash
+g++ -std=c++17 -Wall -Wextra -pedantic \
+  sem_padroes/dispositivo_cpp/main.cpp \
+  -o /tmp/padroes_i_sem_padroes_cpp
+
+/tmp/padroes_i_sem_padroes_cpp
+```
+
+### Exemplo com padrões
+
 ```bash
 g++ -std=c++17 -Wall -Wextra -pedantic \
   -I dispositivo_cpp/include \
@@ -36,6 +53,14 @@ g++ -std=c++17 -Wall -Wextra -pedantic \
 
 ## Como executar o Python
 
+### Contraexemplo sem Repository
+
+```bash
+python3 sem_padroes/supervisor_python/app_sem_repository.py
+```
+
+### Exemplo com Repository
+
 ```bash
 python3 supervisor_python/app_demo.py
 ```
@@ -46,3 +71,4 @@ python3 supervisor_python/app_demo.py
 - `comando.hpp`: ações de atuação (`Command`).
 - `repositorios.py`: acesso a dados (`Repository`).
 - `main.cpp` e `app_demo.py`: fluxo completo usando as peças.
+- `sem_padroes/`: contraexemplos para comparar com a versão organizada.
