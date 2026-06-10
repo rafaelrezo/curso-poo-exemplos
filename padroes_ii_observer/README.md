@@ -11,6 +11,8 @@ padroes_ii_observer/
   sem_observer/
     dispositivo_cpp/
       main.cpp
+    supervisor_python/
+      app_sem_observer.py
   dispositivo_cpp/
     include/
       estacao_bombeamento.hpp
@@ -21,11 +23,18 @@ padroes_ii_observer/
       registrador_eventos.hpp
     src/
       main.cpp
+  supervisor_python/
+    app_demo.py
+    modelos.py
+    monitor_eventos.py
+    observadores.py
 ```
 
 ## Como executar
 
 ### Contraexemplo sem Observer
+
+#### C++
 
 ```bash
 g++ -std=c++17 -Wall -Wextra -pedantic \
@@ -35,7 +44,15 @@ g++ -std=c++17 -Wall -Wextra -pedantic \
 /tmp/padroes_ii_sem_observer_cpp
 ```
 
+#### Python
+
+```bash
+python3 sem_observer/supervisor_python/app_sem_observer.py
+```
+
 ### Exemplo com Observer
+
+#### C++
 
 ```bash
 g++ -std=c++17 -Wall -Wextra -pedantic \
@@ -44,6 +61,12 @@ g++ -std=c++17 -Wall -Wextra -pedantic \
   -o /tmp/padroes_ii_observer_cpp
 
 /tmp/padroes_ii_observer_cpp
+```
+
+#### Python
+
+```bash
+python3 supervisor_python/app_demo.py
 ```
 
 ## Leitura recomendada
@@ -55,3 +78,4 @@ g++ -std=c++17 -Wall -Wextra -pedantic \
 - `registrador_eventos.hpp`: observador que simula persistência.
 - `estacao_bombeamento.hpp`: sujeito observado.
 - `sem_observer/`: contraexemplo para comparar com a versão organizada.
+- `supervisor_python/`: aplicação do Observer no supervisório Python.
