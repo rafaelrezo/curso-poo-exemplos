@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "estacao_bombeamento.hpp"
-#include "gerenciador_alarmes.hpp"
-#include "logger_console.hpp"
-#include "registrador_eventos.hpp"
+#include "../include/estacao_bombeamento.hpp"
+#include "../include/gerenciador_alarmes.hpp"
+#include "../include/logger_console.hpp"
+#include "../include/registrador_eventos.hpp"
 
 int main() {
     EstacaoBombeamento estacao;
