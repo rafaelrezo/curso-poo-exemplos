@@ -1,0 +1,4 @@
+{"tag":"LT-101","valor":42.0,"unidade":"%","timestamp":"2026-06-09T10:00:00-03:00","status":"operando"}
+{"tag":"PT-201","valor":7.2,"unidade":"bar","timestamp":"2026-06-09T10:00:01-03:00","status":"alerta"}
+{"tag":"FT-301","valor":11.5,"unidade":"m3/h","timestamp":"2026-06-09T10:00:02-03:00","status":"alerta"}
+

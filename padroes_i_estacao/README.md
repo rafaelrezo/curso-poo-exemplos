@@ -22,10 +22,17 @@ padroes_i_estacao/
       tipo_comando.hpp
     src/
       main.cpp
+    tests/
+      test_controle.cpp
   supervisor_python/
     app_demo.py
     modelos.py
     repositorios.py
+    requirements-dev.txt
+    validacao.py
+    tests/
+      test_repositorios.py
+      test_validacao.py
 ```
 
 ## Como executar o C++
@@ -65,10 +72,34 @@ python3 sem_padroes/supervisor_python/app_sem_repository.py
 python3 supervisor_python/app_demo.py
 ```
 
+## Como executar os testes
+
+### Testes C++
+
+```bash
+mkdir -p dispositivo_cpp/build
+g++ -std=c++17 -Wall -Wextra -pedantic \
+  -I dispositivo_cpp/include \
+  dispositivo_cpp/tests/test_controle.cpp \
+  -o dispositivo_cpp/build/test_controle
+
+./dispositivo_cpp/build/test_controle
+```
+
+### Testes Python
+
+```bash
+cd supervisor_python
+python3 -m pip install -r requirements-dev.txt
+python3 -m pytest -q
+```
+
 ## Leitura recomendada
 
 - `estrategia_controle.hpp`: regras de controle (`Strategy`).
 - `comando.hpp`: ações de atuação (`Command`).
 - `repositorios.py`: acesso a dados (`Repository`).
+- `validacao.py`: validação do contrato JSON.
+- `tests/`: exemplos pequenos de testes automatizados.
 - `main.cpp` e `app_demo.py`: fluxo completo usando as peças.
 - `sem_padroes/`: contraexemplos para comparar com a versão organizada.
